@@ -3,4 +3,4 @@
         materialized='table'
     )
 }}
-select * from dbt_vchilamwar.customers where number_of_orders>1
+select * from {{ ref('customers') }} where number_of_orders>1
