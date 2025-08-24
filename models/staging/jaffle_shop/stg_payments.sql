@@ -5,4 +5,4 @@ select
     status,
     amount/100 amount,
     created date
-from stripe.payment
+from {{ source('stripe', 'payment') }}
